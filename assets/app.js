@@ -38,6 +38,11 @@
   const hero = document.querySelector('.hero');
   let userPaused = false;
   let usingFull = false;
+  const playbackRate = 0.55;
+
+  const applyRate = () => {
+    if (video) video.playbackRate = playbackRate;
+  };
 
   const setVideoUi = (playing) => {
     if (!videoToggle || !videoLabel) return;
@@ -49,7 +54,9 @@
     if (!video) return false;
     try {
       video.muted = true;
+      applyRate();
       await video.play();
+      applyRate();
       setVideoUi(true);
       return true;
     } catch (_err) {
@@ -81,6 +88,10 @@
     video.muted = true;
     video.defaultMuted = true;
     video.playsInline = true;
+    applyRate();
+    video.addEventListener('ratechange', () => {
+      if (video.playbackRate !== playbackRate) applyRate();
+    });
     if (canAutoplay()) {
       tryPlay();
       video.addEventListener('loadeddata', () => {
