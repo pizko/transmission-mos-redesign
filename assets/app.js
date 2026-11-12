@@ -1,7 +1,6 @@
 (() => {
   const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   const desktopMq = window.matchMedia('(min-width: 900px)');
-  const wideMq = window.matchMedia('(min-width: 1024px)');
   const finePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
   const saveData = !!(navigator.connection && navigator.connection.saveData);
   const hasGsap = typeof window.gsap !== 'undefined' && typeof window.ScrollTrigger !== 'undefined';
