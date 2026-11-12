@@ -305,62 +305,6 @@
     }
   });
 
-  /* Services preview */
-  const preview = document.querySelector('[data-services-preview]');
-  const previewImg = document.querySelector('[data-services-preview-img]');
-  const previewMask = preview?.querySelector('.services__preview-mask');
-  const serviceLinks = Array.from(document.querySelectorAll('[data-service]'));
-  let previewTween;
-
-  const showServicePreview = (src) => {
-    if (!preview || !previewImg || !previewMask || !finePointer.matches || !wideMq.matches || reduceMotion.matches) return;
-    if (previewImg.getAttribute('src') !== src) previewImg.setAttribute('src', src);
-    preview.classList.add('is-visible');
-    if (hasGsap) {
-      previewTween?.kill();
-      previewTween = gsap.fromTo(previewMask, { clipPath: 'inset(100% 0 0 0)' }, {
-        clipPath: 'inset(0% 0 0 0)',
-        duration: 0.4,
-        ease: 'power3.out',
-      });
-    } else {
-      previewMask.style.clipPath = 'inset(0% 0 0 0)';
-    }
-  };
-
-  const hideServicePreview = () => {
-    if (!preview || !previewMask) return;
-    serviceLinks.forEach((link) => link.classList.remove('is-active'));
-    if (hasGsap && !reduceMotion.matches) {
-      previewTween?.kill();
-      previewTween = gsap.to(previewMask, {
-        clipPath: 'inset(100% 0 0 0)',
-        duration: 0.28,
-        ease: 'power2.in',
-        onComplete: () => preview.classList.remove('is-visible'),
-      });
-    } else {
-      previewMask.style.clipPath = 'inset(100% 0 0 0)';
-      preview.classList.remove('is-visible');
-    }
-  };
-
-  serviceLinks.forEach((link) => {
-    const src = link.getAttribute('data-image');
-    link.addEventListener('mouseenter', () => {
-      serviceLinks.forEach((item) => item.classList.remove('is-active'));
-      link.classList.add('is-active');
-      if (src) showServicePreview(src);
-      else hideServicePreview();
-    });
-    link.addEventListener('focus', () => {
-      serviceLinks.forEach((item) => item.classList.remove('is-active'));
-      link.classList.add('is-active');
-      if (src) showServicePreview(src);
-    });
-  });
-  document.querySelector('[data-services-list]')?.addEventListener('mouseleave', hideServicePreview);
-
   /* Magnetic — weak */
   if (finePointer.matches && !reduceMotion.matches) {
     document.querySelectorAll('[data-magnetic]').forEach((btn) => {
