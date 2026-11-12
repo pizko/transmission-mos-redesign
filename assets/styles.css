@@ -474,7 +474,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   max-width: 48ch;
 }
 
-/* Services — emoji squares */
+/* Services — clean squares */
 .services-grid {
   list-style: none;
   margin: 0;
@@ -484,37 +484,54 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
   gap: 10px;
 }
 .service-card {
+  position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
   aspect-ratio: 1 / 1;
-  padding: 14px;
+  padding: 16px;
   border: 1px solid var(--line);
-  background: var(--surface);
+  background:
+    linear-gradient(160deg, rgba(255, 255, 255, 0.03), transparent 42%),
+    var(--surface);
+  overflow: hidden;
   transition: border-color 0.25s var(--ease), background 0.25s var(--ease), transform 0.25s var(--ease);
 }
-.service-card__emoji {
-  font-size: clamp(1.6rem, 3.5vw, 2.1rem);
-  line-height: 1;
+.service-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto auto 0;
+  width: 28px;
+  height: 1px;
+  background: var(--accent);
+  opacity: 0.55;
+  transition: width 0.3s var(--ease), opacity 0.3s var(--ease);
 }
 .service-card__num {
-  margin-top: auto;
   color: var(--mute);
   font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.04em;
 }
 .service-card__name {
-  margin-top: 6px;
-  font-size: clamp(0.82rem, 1.5vw, 1rem);
+  margin-top: 8px;
+  font-size: clamp(0.88rem, 1.5vw, 1.05rem);
   font-weight: 600;
   line-height: 1.25;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 }
 .service-card:hover,
 .service-card:focus-visible {
-  border-color: rgba(201, 75, 58, 0.45);
-  background: rgba(201, 75, 58, 0.08);
+  border-color: rgba(201, 75, 58, 0.5);
+  background:
+    linear-gradient(160deg, rgba(201, 75, 58, 0.1), transparent 50%),
+    var(--surface);
   transform: translateY(-2px);
+}
+.service-card:hover::before,
+.service-card:focus-visible::before {
+  width: 48px;
+  opacity: 1;
 }
 
 @media (min-width: 640px) {
@@ -522,7 +539,7 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 12px;
   }
-  .service-card { padding: 16px; }
+  .service-card { padding: 18px; }
 }
 @media (min-width: 1024px) {
   .services-grid {
