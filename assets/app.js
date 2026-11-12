@@ -152,7 +152,7 @@
     if (submitBtn) submitBtn.disabled = true;
     setStatus('Отправляем…', null);
     try {
-      const response = await fetch(form.getAttribute('action') || 'send.php', {
+      const response = await fetch(form.getAttribute('action') || 'https://deltamoscow.ru/transmission-lead', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
