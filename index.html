@@ -6,243 +6,202 @@
   <title>Ремонт АКПП, DSG и вариаторов в Москве — АКПП Центр</title>
   <meta name="description" content="Ремонт АКПП, DSG, CVT и Powershift в Москве. Диагностика, эвакуация, гарантия до 2 лет. Москва, посёлок завода Мосрентген, Институтский проезд, 6. Тел.: +7 (495) 128-50-55.">
   <meta name="robots" content="noindex,nofollow">
-  <meta name="theme-color" content="#121416">
+  <meta name="theme-color" content="#1a1614">
   <link rel="stylesheet" href="assets/styles.css">
-  <script src="assets/vendor/gsap.min.js" defer></script>
-  <script src="assets/vendor/ScrollTrigger.min.js" defer></script>
   <script src="assets/app.js" defer></script>
 </head>
 <body>
-  <div class="scroll-progress" data-scroll-progress aria-hidden="true"><span></span></div>
   <a class="skip-link" href="#content">Перейти к содержанию</a>
 
-  <header class="site-header" data-header>
-    <div class="wrap site-header__inner">
-      <a class="brand" href="#top">
-        <img src="assets/images/logo.png" alt="" width="44" height="32" decoding="async">
-        <span>АКПП Центр</span>
-      </a>
-
-      <nav class="nav-desktop" aria-label="Основное меню">
-        <a href="#top">Главная</a>
-        <a href="#services">Услуги</a>
-        <a href="#about">О сервисе</a>
-        <a href="#gallery">Галерея</a>
-        <a href="#contacts">Контакты</a>
-      </nav>
-
-      <div class="site-header__actions">
-        <a class="header-phone" href="tel:+74951285055">+7 (495) 128-50-55</a>
-        <a class="btn btn--sm" href="#contacts" data-magnetic>Запись</a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
-          <span class="menu-toggle__icon" aria-hidden="true"><span></span><span></span></span>
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div>
-    </div>
+  <header class="bar" data-header>
+    <a class="bar__brand" href="#top">АКПП Центр</a>
+    <nav class="bar__nav" aria-label="Основное меню">
+      <a href="#services">Услуги</a>
+      <a href="#about">О сервисе</a>
+      <a href="#gallery">Цех</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <a class="bar__phone" href="tel:+74951285055">+7 (495) 128-50-55</a>
+    <button class="bar__menu" type="button" aria-expanded="false" aria-controls="mobile-nav" data-menu-toggle>
+      <span class="visually-hidden">Меню</span>
+      <span aria-hidden="true"></span>
+    </button>
   </header>
 
-  <nav class="nav-mobile" id="mobile-nav" aria-label="Мобильное меню" data-menu hidden>
-    <a href="#top" data-menu-link>Главная</a>
+  <nav class="drawer" id="mobile-nav" aria-label="Мобильное меню" data-menu hidden>
     <a href="#services" data-menu-link>Услуги</a>
     <a href="#about" data-menu-link>О сервисе</a>
-    <a href="#gallery" data-menu-link>Галерея</a>
+    <a href="#gallery" data-menu-link>Цех</a>
     <a href="#contacts" data-menu-link>Контакты</a>
+    <a href="tel:+74951285055" data-menu-link>+7 (495) 128-50-55</a>
   </nav>
 
   <main id="content">
-    <section class="hero" id="top" data-hero>
-      <div class="hero__media" data-hero-media>
-        <figure class="video">
-          <div class="video__mask" data-video-mask>
-            <video
-              class="video__el"
-              data-hero-video
-              data-preview-src="assets/video/workshop-preview.mp4"
-              data-full-src="assets/video/workshop.mp4"
-              poster="assets/video/workshop-poster.jpg"
-              playsinline
-              muted
-              loop
-              preload="metadata"
-              width="720"
-              height="1280"
-            >
-              <source src="assets/video/workshop-preview.mp4" type="video/mp4">
-            </video>
-          </div>
-          <button class="video__btn" type="button" data-video-toggle aria-pressed="false" data-hero-fade>
-            <span data-video-toggle-label>Воспроизвести</span>
-          </button>
-        </figure>
+    <section class="hero" id="top">
+      <div class="hero__shot" aria-hidden="true">
+        <video
+          class="hero__video"
+          data-hero-video
+          data-preview-src="assets/video/workshop-preview.mp4"
+          data-full-src="assets/video/workshop.mp4"
+          poster="assets/video/workshop-poster.jpg"
+          playsinline
+          muted
+          loop
+          preload="metadata"
+        >
+          <source src="assets/video/workshop-preview.mp4" type="video/mp4">
+        </video>
       </div>
-
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <p class="eyebrow" data-hero-fade>АКПП Центр · Москва</p>
-          <h1 class="hero__title" data-hero-title aria-label="Ремонт АКПП, DSG и вариаторов в Москве">
-            <span class="line" aria-hidden="true"><span class="line__inner">Ремонт АКПП,</span></span>
-            <span class="line" aria-hidden="true"><span class="line__inner">DSG и вариаторов</span></span>
-            <span class="line" aria-hidden="true"><span class="line__inner">в Москве</span></span>
-          </h1>
-          <p class="hero__lead" data-hero-fade>Специализированный сервис: диагностика, ремонт и обслуживание автоматических коробок передач.</p>
-          <div class="hero__actions" data-hero-fade>
-            <a class="btn" href="#contacts" data-magnetic data-btn-shift>
-              <span class="btn__label">Записаться на диагностику</span>
-              <span class="btn__arrow" aria-hidden="true">→</span>
-            </a>
-            <a class="text-link" href="tel:+74951285055">Позвонить</a>
-          </div>
+      <div class="hero__veil" aria-hidden="true"></div>
+      <div class="hero__inner wrap">
+        <h1 class="hero__title">Ремонт АКПП, DSG и вариаторов в Москве</h1>
+        <p class="hero__lead">Специализированный сервис: диагностика, ремонт и обслуживание автоматических коробок.</p>
+        <div class="hero__actions">
+          <a class="btn" href="#contacts">Записаться на диагностику</a>
+          <button class="btn btn--ghost" type="button" data-video-toggle aria-pressed="false">
+            <span data-video-toggle-label>Смотреть цех</span>
+          </button>
         </div>
       </div>
     </section>
 
-    <section class="section" id="services" data-services>
+    <section class="block services" id="services">
       <div class="wrap">
-        <header class="section-head" data-services-intro>
-          <p class="eyebrow">Каталог работ</p>
-          <h2 data-reveal-title>Ремонт и обслуживание трансмиссий</h2>
-          <p class="section-head__lead">Полный перечень работ по автоматическим и механическим коробкам — от диагностики до адаптации ПО.</p>
+        <header class="block__head">
+          <h2>Работы по трансмиссии</h2>
+          <p>От диагностики до адаптации ПО — полный перечень по АКПП, DSG, CVT и механике.</p>
         </header>
-
-        <ul class="services-grid">
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">01</span><span class="service-card__name">Ремонт АКПП</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">02</span><span class="service-card__name">Диагностика трансмиссий</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">03</span><span class="service-card__name">Ремонт ДСГ</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">04</span><span class="service-card__name">Ремонт вариаторов</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">05</span><span class="service-card__name">Ремонт раздаточных коробок</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">06</span><span class="service-card__name">Ремонт Powershift</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">07</span><span class="service-card__name">Ремонт РКПП</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">08</span><span class="service-card__name">Ремонт гидротрансформаторов</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">09</span><span class="service-card__name">Замена сцепления</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">10</span><span class="service-card__name">Ремонт двухмассовых маховиков</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">11</span><span class="service-card__name">Замена трансмиссионной жидкости</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">12</span><span class="service-card__name">Продажа контрактных АКПП</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">13</span><span class="service-card__name">Адаптация и прошивка ПО</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">14</span><span class="service-card__name">Ремонт гидроблоков</span></a></li>
-          <li><a class="service-card" href="#contacts"><span class="service-card__num">15</span><span class="service-card__name">Ремонт мехатроников</span></a></li>
+        <ul class="catalog">
+          <li><a href="#contacts">Ремонт АКПП</a></li>
+          <li><a href="#contacts">Диагностика трансмиссий</a></li>
+          <li><a href="#contacts">Ремонт ДСГ</a></li>
+          <li><a href="#contacts">Ремонт вариаторов</a></li>
+          <li><a href="#contacts">Ремонт раздаточных коробок</a></li>
+          <li><a href="#contacts">Ремонт Powershift</a></li>
+          <li><a href="#contacts">Ремонт РКПП</a></li>
+          <li><a href="#contacts">Ремонт гидротрансформаторов</a></li>
+          <li><a href="#contacts">Замена сцепления</a></li>
+          <li><a href="#contacts">Ремонт двухмассовых маховиков</a></li>
+          <li><a href="#contacts">Замена трансмиссионной жидкости</a></li>
+          <li><a href="#contacts">Продажа контрактных АКПП</a></li>
+          <li><a href="#contacts">Адаптация и прошивка ПО</a></li>
+          <li><a href="#contacts">Ремонт гидроблоков</a></li>
+          <li><a href="#contacts">Ремонт мехатроников</a></li>
         </ul>
       </div>
     </section>
 
-    <section class="section about" id="about" data-about>
+    <section class="block about" id="about">
       <div class="wrap about__grid">
         <figure class="about__media">
-          <div class="about__mask" data-about-mask>
-            <picture>
-              <source type="image/webp" srcset="assets/images/gallery/full/g-01.webp">
-              <img src="assets/images/gallery/full/g-01.jpg" alt="Зона ремонта: автомобили на подъёмниках в мастерской" width="800" height="600" loading="lazy" decoding="async" data-about-img>
-            </picture>
-          </div>
+          <picture>
+            <source type="image/webp" srcset="assets/images/gallery/full/g-01.webp">
+            <img src="assets/images/gallery/full/g-01.jpg" alt="Зона ремонта: автомобили на подъёмниках в мастерской" width="800" height="600" loading="lazy" decoding="async">
+          </picture>
         </figure>
         <div class="about__copy">
-          <p class="eyebrow">О сервисе</p>
-          <h2 data-reveal-title>О сервисе</h2>
-          <div class="about__text">
-            <p>Мы ремонтируем АКПП, МКПП, DSG, вариаторы CVT и PowerShift. Первичную диагностику обычно проводим в течение часа. По Москве доступна бесплатная эвакуация.</p>
-            <p>В работе — гидроблоки, маслонасосы, гидротрансформаторы, редукторы, блоки управления и электрика. При необходимости меняем масло, адаптируем и прошиваем ПО.</p>
-            <p>Также подбираем и продаём трансмиссии под конкретный автомобиль.</p>
-          </div>
-          <a class="text-link" href="#contacts">Записаться на диагностику →</a>
+          <h2>О сервисе</h2>
+          <p>Ремонтируем АКПП, МКПП, DSG, вариаторы CVT и PowerShift. Первичную диагностику обычно проводим в течение часа. По Москве — бесплатная эвакуация.</p>
+          <p>В работе гидроблоки, маслонасосы, гидротрансформаторы, редукторы, блоки управления и электрика. При необходимости меняем масло, адаптируем и прошиваем ПО.</p>
+          <p>Подбираем и продаём трансмиссии под конкретный автомобиль.</p>
+          <a class="text-link" href="#contacts">Записаться на диагностику</a>
         </div>
       </div>
     </section>
 
-    <section class="section gallery" id="gallery" data-gallery-section>
-      <div class="wrap gallery__layout">
-        <aside class="gallery__side" data-gallery-sticky>
-          <p class="eyebrow">Фото</p>
-          <h2 data-reveal-title>Мастерская в деталях</h2>
-          <p class="gallery__sub">Фотографии сервиса</p>
-          <p class="gallery__counter" data-gallery-counter aria-live="polite">01 / 12</p>
-        </aside>
-
-        <div class="gallery__grid" data-gallery>
-          <button class="gallery__item" type="button" data-gallery-open data-index="0" aria-label="Открыть фото 1 из 12">
-            <span class="gallery__mask"><picture>
+    <section class="block gallery" id="gallery">
+      <div class="wrap">
+        <header class="block__head">
+          <h2>Цех</h2>
+          <p>Рабочие места, подъёмники, контрактные коробки и узлы в разборе.</p>
+        </header>
+        <div class="sheet" data-gallery>
+          <button type="button" data-gallery-open data-index="0" aria-label="Открыть фото 1 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-01.webp">
               <img src="assets/images/gallery/thumb/g-01.jpg" alt="Автомобили на подъёмниках в цехе" width="640" height="480" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="1" aria-label="Открыть фото 2 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="1" aria-label="Открыть фото 2 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-02.webp">
               <img src="assets/images/gallery/thumb/g-02.jpg" alt="Съём внутреннего узла АКПП съёмником" width="450" height="640" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="2" aria-label="Открыть фото 3 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="2" aria-label="Открыть фото 3 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-03.webp">
               <img src="assets/images/gallery/thumb/g-03.jpg" alt="SUV на гидравлических подъёмниках" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="3" aria-label="Открыть фото 4 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="3" aria-label="Открыть фото 4 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-04.webp">
               <img src="assets/images/gallery/thumb/g-04.jpg" alt="Сборка узла АКПП в перчатках на верстаке" width="517" height="640" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="4" aria-label="Открыть фото 5 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="4" aria-label="Открыть фото 5 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-05.webp">
               <img src="assets/images/gallery/thumb/g-05.jpg" alt="Контрактные АКПП на складских стеллажах" width="640" height="396" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="5" aria-label="Открыть фото 6 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="5" aria-label="Открыть фото 6 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-06.webp">
               <img src="assets/images/gallery/thumb/g-06.jpg" alt="Разобранная АКПП на синем верстаке" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="6" aria-label="Открыть фото 7 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="6" aria-label="Открыть фото 7 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-07.webp">
               <img src="assets/images/gallery/thumb/g-07.jpg" alt="Открытый корпус АКПП с шестернями на верстаке" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="7" aria-label="Открыть фото 8 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="7" aria-label="Открыть фото 8 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-08.webp">
               <img src="assets/images/gallery/thumb/g-08.jpg" alt="Механик с пневмоинструментом у корпуса АКПП" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="8" aria-label="Открыть фото 9 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="8" aria-label="Открыть фото 9 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-09.webp">
               <img src="assets/images/gallery/thumb/g-09.jpg" alt="Автомобили в цехе: Kia и хэтчбек на подъёмнике" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="9" aria-label="Открыть фото 10 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="9" aria-label="Открыть фото 10 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-10.webp">
               <img src="assets/images/gallery/thumb/g-10.jpg" alt="Цех с автомобилями и оборудованием" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="10" aria-label="Открыть фото 11 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="10" aria-label="Открыть фото 11 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-11.webp">
               <img src="assets/images/gallery/thumb/g-11.jpg" alt="Открытый корпус АКПП и гидроблок на верстаке" width="600" height="800" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
-          <button class="gallery__item" type="button" data-gallery-open data-index="11" aria-label="Открыть фото 12 из 12">
-            <span class="gallery__mask"><picture>
+          <button type="button" data-gallery-open data-index="11" aria-label="Открыть фото 12 из 12">
+            <picture>
               <source type="image/webp" srcset="assets/images/gallery/thumb/g-12.webp">
               <img src="assets/images/gallery/thumb/g-12.jpg" alt="Рабочее место механика у вытяжки" width="640" height="360" loading="lazy" decoding="async">
-            </picture></span>
+            </picture>
           </button>
         </div>
       </div>
     </section>
 
-    <section class="section advantages" id="advantages" aria-labelledby="advantages-title">
+    <section class="facts" aria-labelledby="facts-title">
       <div class="wrap">
-        <h2 id="advantages-title" class="visually-hidden">Преимущества</h2>
-        <dl class="advantages__list">
-          <div><dt>15 лет</dt><dd>опыт работы сервиса</dd></div>
-          <div><dt>до 2 лет</dt><dd>гарантия на ремонтные работы</dd></div>
-          <div><dt>0 ₽</dt><dd>первичная диагностика</dd></div>
-          <div><dt>24/7</dt><dd>эвакуация по Москве</dd></div>
-        </dl>
+        <h2 id="facts-title" class="visually-hidden">Факты</h2>
+        <ul class="facts__list">
+          <li><strong>15 лет</strong> в ремонте трансмиссий</li>
+          <li><strong>до 2 лет</strong> гарантия на работы</li>
+          <li><strong>0 ₽</strong> первичная диагностика</li>
+          <li><strong>24/7</strong> эвакуация по Москве</li>
+        </ul>
       </div>
     </section>
 
@@ -250,35 +209,31 @@
       <div class="wrap tow__inner">
         <div>
           <h2 id="tow-title">Вызвать эвакуатор</h2>
-          <p>Если автомобиль не на ходу или есть серьёзные проблемы с трансмиссией — эвакуируем бесплатно по Москве.</p>
+          <p>Если машина не на ходу или с коробкой серьёзные проблемы — эвакуируем бесплатно по Москве.</p>
         </div>
-        <div class="tow__actions">
-          <a class="tow__phone" href="tel:+74951285055">+7 (495) 128-50-55</a>
-          <a class="btn btn--light" href="tel:+74951285055" data-magnetic>Вызвать</a>
-        </div>
+        <a class="btn btn--invert" href="tel:+74951285055">+7 (495) 128-50-55</a>
       </div>
     </section>
 
-    <section class="section contacts" id="contacts">
+    <section class="block contacts" id="contacts">
       <div class="wrap contacts__grid">
         <div class="contacts__info">
-          <p class="eyebrow">Связь</p>
           <h2>Контакты</h2>
           <address>
             Москва, посёлок завода Мосрентген,<br>
             Институтский проезд, 6
           </address>
-          <p class="contacts__hours">Ежедневно: с 9:00 до 21:00</p>
-          <div class="contacts__links">
-            <a class="text-link" href="tel:+74951285055">+7 (495) 128-50-55</a>
-            <a class="text-link" href="mailto:dsg-akpp@yandex.ru">dsg-akpp@yandex.ru</a>
-          </div>
+          <p>Ежедневно с 9:00 до 21:00</p>
+          <p class="contacts__links">
+            <a href="tel:+74951285055">+7 (495) 128-50-55</a>
+            <a href="mailto:dsg-akpp@yandex.ru">dsg-akpp@yandex.ru</a>
+          </p>
         </div>
 
         <form class="form" action="send.php" method="post" data-contact-form novalidate>
-          <h3>Оставить заявку</h3>
+          <h3>Заявка</h3>
           <label>
-            <span>Ваше имя</span>
+            <span>Имя</span>
             <input type="text" name="name" autocomplete="name">
           </label>
           <label>
@@ -291,45 +246,30 @@
           </label>
           <p class="form__note form__wide">Нажимая «Отправить», вы соглашаетесь на обработку персональных данных.</p>
           <p class="form__status form__wide" data-form-status role="status" aria-live="polite"></p>
-          <button class="btn form__wide" type="submit" data-form-submit data-magnetic data-btn-shift>
-            <span class="btn__label">Отправить сообщение</span>
-            <span class="btn__arrow" aria-hidden="true">→</span>
-          </button>
+          <button class="btn form__wide" type="submit" data-form-submit>Отправить</button>
         </form>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="wrap footer__inner">
-      <a class="brand" href="#top">
-        <img src="assets/images/logo.png" alt="" width="36" height="26" decoding="async">
-        <span>АКПП Центр</span>
-      </a>
-      <nav class="footer__nav" aria-label="Навигация в подвале">
+    <div class="wrap footer__row">
+      <a class="footer__brand" href="#top">АКПП Центр</a>
+      <nav aria-label="Навигация в подвале">
         <a href="#services">Услуги</a>
-        <a href="#gallery">Галерея</a>
+        <a href="#gallery">Цех</a>
         <a href="#contacts">Контакты</a>
       </nav>
-      <div class="footer__contacts">
-        <a href="tel:+74951285055">+7 (495) 128-50-55</a>
-        <a href="mailto:dsg-akpp@yandex.ru">dsg-akpp@yandex.ru</a>
-      </div>
-    </div>
-    <div class="wrap footer__copy">
-      <span>© ООО «АКПП-ЦЕНТР» 2026. Все права защищены.</span>
+      <p>© ООО «АКПП-ЦЕНТР» 2026</p>
     </div>
   </footer>
 
-  <a class="fab-call" href="tel:+74951285055">
-    <span class="fab-call__icon" aria-hidden="true">☎</span>
-    <span>Позвонить</span>
-  </a>
+  <a class="fab" href="tel:+74951285055">Позвонить</a>
 
   <div class="lightbox" data-lightbox hidden>
     <div class="lightbox__backdrop" data-lightbox-close></div>
     <div class="lightbox__dialog" role="dialog" aria-modal="true" aria-label="Просмотр фотографии" tabindex="-1">
-      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Закрыть">×</button>
+      <button class="lightbox__close" type="button" data-lightbox-close aria-label="Закрыть">Закрыть</button>
       <button class="lightbox__nav lightbox__nav--prev" type="button" data-lightbox-prev aria-label="Предыдущее фото">‹</button>
       <figure class="lightbox__figure">
         <img data-lightbox-image alt="" decoding="async">
