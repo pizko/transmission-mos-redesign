@@ -376,11 +376,14 @@ button { cursor: pointer; background: none; border: 0; padding: 0; }
 .hero__grid {
   position: relative;
   z-index: 2;
-  width: min(100% - 32px, var(--wrap));
-  margin: 0 auto;
   padding: 36px 0 88px;
   display: grid;
   gap: 0;
+}
+.hero__copy {
+  position: relative;
+  z-index: 2;
+  max-width: 28rem;
 }
 .hero__title {
   margin: 0;
@@ -482,18 +485,31 @@ body {
   .fab-call { display: none; }
 
   .hero {
-    padding: 36px 0 64px;
-    min-height: 0;
-    display: block;
-    overflow: visible;
-  }
-  .hero__grid {
-    width: min(100% - 48px, var(--wrap));
-    padding: 0;
-    grid-template-columns: minmax(0, 1fr) minmax(280px, 380px);
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(280px, 380px);
     gap: 48px;
     align-items: center;
+    width: min(100% - 48px, var(--wrap));
+    margin-inline: auto;
+    padding: 36px 0 64px;
+    min-height: 0;
+    overflow: visible;
   }
+  .hero__media {
+    position: relative;
+    inset: auto;
+    order: 2;
+    width: 100%;
+    pointer-events: auto;
+  }
+  .hero__grid {
+    order: 1;
+    width: auto;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+  }
+  .hero__copy { max-width: none; }
   .hero__title {
     font-size: clamp(2.4rem, 3.6vw, 3.4rem);
     max-width: 11ch;
@@ -508,12 +524,6 @@ body {
     text-shadow: none;
   }
   .hero__actions .text-link { display: inline-flex; }
-  .hero__media {
-    position: relative;
-    inset: auto;
-    width: 100%;
-    pointer-events: auto;
-  }
   .video {
     position: relative;
     inset: auto;
@@ -530,6 +540,7 @@ body {
     position: absolute;
     right: 10px;
     bottom: 10px;
+    z-index: 2;
     min-height: 34px;
     padding: 0 12px;
     border: 1px solid var(--line);
