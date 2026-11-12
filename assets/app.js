@@ -59,11 +59,13 @@
   const setVideoUi = (playing) => {
     if (!videoToggle || !videoLabel) return;
     videoToggle.setAttribute('aria-pressed', playing ? 'true' : 'false');
-    videoLabel.textContent = playing ? 'Пауза' : 'Воспроизвести';
+    videoToggle.hidden = playing;
+    videoLabel.textContent = 'Воспроизвести';
   };
   const tryPlay = async () => {
     if (!video) return false;
     try {
+      video.muted = true;
       await video.play();
       setVideoUi(true);
       return true;
@@ -100,8 +102,17 @@
     video.muted = true;
     video.defaultMuted = true;
     video.setAttribute('playsinline', '');
-    if (canAutoplay()) tryPlay();
-    else setVideoUi(false);
+    video.setAttribute('webkit-playsinline', '');
+    video.playsInline = true;
+    if (canAutoplay()) {
+      tryPlay();
+      // mobile browsers sometimes need a second kick after metadata
+      video.addEventListener('loadeddata', () => {
+        if (!userPaused && canAutoplay() && video.paused) tryPlay();
+      }, { once: true });
+    } else {
+      setVideoUi(false);
+    }
 
     videoToggle?.addEventListener('click', async () => {
       if (!video.paused) {
@@ -114,17 +125,25 @@
     });
 
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden) pauseVideo();
+      if (document.hidden) {
+        if (!video.paused) video.pause();
+      } else if (!userPaused && canAutoplay()) {
+        tryPlay();
+      }
     });
 
-    if ('IntersectionObserver' in window) {
+    const hero = document.querySelector('[data-hero]');
+    if ('IntersectionObserver' in window && hero) {
       const io = new IntersectionObserver((entries) => {
         entries.forEach((entry) => {
-          if (!entry.isIntersecting) pauseVideo();
-          else if (!userPaused && canAutoplay() && !usingFull) tryPlay();
+          if (!entry.isIntersecting) {
+            if (!video.paused) video.pause();
+            return;
+          }
+          if (!userPaused && canAutoplay()) tryPlay();
         });
-      }, { threshold: 0.35 });
-      io.observe(video);
+      }, { threshold: 0.15 });
+      io.observe(hero);
     }
   }
 
